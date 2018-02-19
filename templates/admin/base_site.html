@@ -1,0 +1,8 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ title }} | {{ site_title|default:_('Mental Math Trainer site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Mental Math Trainer Administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
