@@ -35,12 +35,12 @@ isPubSubSocketRender = os.environ.get('Apple_PubSub_Socket_Render')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SITE_ID = 1
+SITE_ID = 2
 CORS_ORIGIN_ALLOW_ALL = True
 
 if isPubSubSocketRender is not None and isLocalEnv is None:
     print("MM-SERVICE-WARN: Looks like you're trying to run the app for local dev, but you haven't indicated as such.")
-    print("MM-SERVICE-WARN: Stop application now and set the env variable isLocalEnv to '1'.")
+    print("MM-SERVICE-WARN: Stop application now and set the env variable LOCALDEV to '1'.")
     print("MM-SERVICE-WARN: If using Pycharm, this can be done through:")
     print("MM-SERVICE-WARN: Run -> Edit Configuration -> Environment Variables.")
 
@@ -178,9 +178,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-EMAIL_BACKEND = 'django.core.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.backends.console.EmailBackend'
 
 # if you're running a local SMTP server via: python3 -m aiosmtpd -n
 # THen enable the below env vars:
-# EMAIL_HOST = 'localhost'
-# EMAIL_PORT = 8025
+#EMAIL_HOST = 'localhost'
+#EMAIL_PORT = 8025
+
+#ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+#ACCOUNT_EMAIL_REQUIRED = True
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mmtrainerhelpdesk'
+EMAIL_HOST_PASSWORD = '6);%3un39J}T'
+EMAIL_PORT = 587
