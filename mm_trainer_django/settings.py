@@ -192,3 +192,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mmtrainerhelpdesk'
 EMAIL_HOST_PASSWORD = '6);%3un39J}T'
 EMAIL_PORT = 587
+ACCOUNT_ADAPTER = 'mm_trainer_rest_api.adapter.MMAccountAdapter'
+URL_FRONT = 'http://localhost:4200/'
