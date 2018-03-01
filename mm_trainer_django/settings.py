@@ -185,8 +185,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #EMAIL_HOST = 'localhost'
 #EMAIL_PORT = 8025
 
-#ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-#ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mmtrainerhelpdesk'
